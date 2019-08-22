@@ -79,7 +79,7 @@ public class AbsolutePathGeneratorITest extends IntegrationTestWithJenkinsPerSui
                 DumbSlave result1;
                 synchronized (jenkinsRule.jenkins) {
                     DumbSlave slave = new DumbSlave("slave" + sz, "dummy",
-                            jenkinsRule.createTmpDir().getPath(), "1", Node.Mode.NORMAL, labels ==null?"": labels, jenkinsRule
+                            jenkinsRule.createTmpDir().getPath().toLowerCase(), "1", Node.Mode.NORMAL, labels ==null?"": labels, jenkinsRule
                             .createComputerLauncher(null), RetentionStrategy.NOOP, Collections.EMPTY_LIST);
                     jenkinsRule.jenkins.addNode(slave);
                     result1 = slave;
