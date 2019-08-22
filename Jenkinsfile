@@ -24,7 +24,7 @@ node ('windows') {
                 writeFile file: settingsXml, text: libraryResource('settings-azure.xml')
                 mavenOptions += "-s $settingsXml"
             }
-            mavenOptions += "clean test -DAbsolutePathGeneratorITest -Djenkins.test.timeout=1000"
+            mavenOptions += "clean test -Dtest=AbsolutePathGeneratorITest -Djenkins.test.timeout=1000"
             command = "mvn ${mavenOptions.join(' ')}"
             env << "PATH+MAVEN=${tool 'mvn'}/bin"
 
