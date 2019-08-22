@@ -16,8 +16,7 @@
       <script src="${resURL}/plugin/warnings-ng/js/libs/jquery.min.js"/>
       <script src="${resURL}/plugin/warnings-ng/js/libs/popper.min.js"/>
       <script src="${resURL}/plugin/warnings-ng/js/libs/bootstrap.min.js"/>
-      <script src="${resURL}/plugin/warnings-ng/js/libs/datatables.min.js"/>
-      
+
       <div class="fluid-container">
 
         <h3>${it.displayName}</h3>
@@ -73,6 +72,8 @@
           </tbody>
         </table>
       </div>
+      <script type="text/javascript" src="${resURL}/plugin/warnings-ng/js/no-prototype.js"/>
+      <script src="${resURL}/plugin/warnings-ng/js/libs/datatables.min.js"/>
 
     </l:main-panel>
   </l:layout>
