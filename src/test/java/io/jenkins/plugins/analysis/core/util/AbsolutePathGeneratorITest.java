@@ -49,7 +49,7 @@ public class AbsolutePathGeneratorITest extends IntegrationTestWithJenkinsPerSui
         AnalysisResult result = scheduleSuccessfulBuild(project);
         assertThat(result).hasTotalSize(1);
 
-        assertThat(result).hasInfoMessages("-> 0 resolved, 0 unresolved, 1 already resolved");
+        assertThat(result).hasInfoMessages("-> 1 resolved, 0 unresolved, 0 already resolved");
         assertThat(result).doesNotHaveInfoMessages("-> 0 copied, 1 not in workspace, 0 not-found, 0 with I/O error");
 
         SourceCodeView view = new SourceCodeView(getSourceCodePage(result));
